@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_gradient"
+    tools:context="com.example.johnpconsidine.researchupdate.trackActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your movements are currently being tracked"
+        android:id="@+id/trackText"
+        android:layout_marginTop="75dp"
+        android:textSize="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gravity Reading"
+        android:id="@+id/gravText"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:textSize="24dp"
+        android:layout_alignBaseline="@+id/gravRead"
+        android:layout_alignBottom="@+id/gravRead"
+        android:layout_alignLeft="@+id/trackText"
+        android:layout_alignStart="@+id/trackText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer"
+        android:id="@+id/accelerometerText"
+        android:textSize="24dp"
+        android:layout_below="@+id/gravText"
+        android:layout_alignLeft="@+id/gravText"
+        android:layout_alignStart="@+id/gravText"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gyroscope"
+        android:id="@+id/gyroscopeText"
+        android:textSize="24dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/accelerometerText"
+        android:layout_alignLeft="@+id/accelerometerText"
+        android:layout_alignStart="@+id/accelerometerText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        tools:text="20"
+        android:id="@+id/gravRead"
+        android:layout_marginRight="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/trackText"
+        android:layout_alignEnd="@+id/trackText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        tools:text="20"
+        android:id="@+id/accelValue"
+        android:layout_alignBottom="@+id/accelerometerText"
+        android:layout_alignLeft="@+id/gravRead"
+        android:layout_alignStart="@+id/gravRead"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        tools:text="20"
+        android:id="@+id/gyroVal"
+        android:layout_alignBottom="@+id/gyroscopeText"
+        android:layout_alignLeft="@+id/accelValue"
+        android:layout_alignStart="@+id/accelValue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Time"
+        android:id="@+id/updateText"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/trackText"
+        android:layout_alignRight="@+id/gyroscopeText"
+        android:layout_alignEnd="@+id/gyroscopeText"
+        android:textSize="24dp"/>
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/updateField"
+        android:text="100"
+        android:layout_alignBottom="@+id/updateText"
+        android:layout_toRightOf="@+id/accelerometerText"
+        android:layout_toEndOf="@+id/accelerometerText"
+        android:background="#ffffffff"/>
+
+</RelativeLayout>
